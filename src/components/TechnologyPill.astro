@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  bgColor: string;
+  name: string;
+  svg: string;
+}
+
+const { bgColor, name, svg } = Astro.props;
+---
+
+<div style={`background: ${bgColor};`}>
+  <Icon name={svg} size={14} />
+  <span>{name}</span>
+</div>
+
+<style>
+  div {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    border-radius: 1rem;
+  }
+  span {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+</style>

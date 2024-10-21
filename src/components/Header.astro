@@ -42,6 +42,7 @@ const links = [
     position: fixed;
     top: 1rem;
     padding-inline: 1rem;
+    opacity: var(--opacity);
     background: var(--header-bg);
     border-radius: 2rem;
     border: 1px solid var(--border);
@@ -58,6 +59,9 @@ const links = [
   }
 
   @media screen and (min-width: 768px) {
+    ul {
+      column-gap: 2rem;
+    }
     a {
       font-size: 1rem;
     }

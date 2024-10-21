@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon/components";
+import SectionContainer from "@components/SectionContainer.astro";
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = [
+  {
+    title: "Project 1",
+    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, quam.",
+    technologies: [
+      { name: "React", svg: "react", bgColor: "#23272f" },
+      { name: "Tailwind CSS", svg: "tailwindcss", bgColor: "#0f172a" },
+    ],
+    link: "https://example.com",
+    repo: "https://github.com",
+  },
+  {
+    title: "Project 2",
+    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, quam.",
+    technologies: [
+      { name: "Next.js", svg: "nextjs", bgColor: "#000" },
+      { name: "Tailwind CSS", svg: "tailwindcss", bgColor: "#0f172a" },
+    ],
+    link: "https://example.com",
+    repo: "https://github.com",
+  },
+  {
+    title: "Project 3",
+    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, quam.",
+    technologies: [
+      { name: "Next.js", svg: "nextjs", bgColor: "#000" },
+      { name: "Tailwind CSS", svg: "tailwindcss", bgColor: "#0f172a" },
+    ],
+    link: "https://example.com",
+    repo: "https://github.com",
+  },
+];
+---
+
+<SectionContainer>
+  <div>
+    <h2><Icon name="code" /> Proyectos</h2>
+    {projects.map((project) => <ProjectCard {...project} />)}
+  </div>
+</SectionContainer>
+<style>
+  h2 {
+    display: flex;
+    align-items: end;
+    column-gap: 0.5rem;
+    opacity: var(--opacity);
+    font-size: 2rem;
+    text-align: start;
+    vertical-align: text-bottom;
+    margin-block-end: 1.5rem;
+  }
+</style>

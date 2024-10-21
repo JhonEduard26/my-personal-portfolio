@@ -22,12 +22,15 @@ import { Image } from "astro:assets";
 
 <style>
   .about--content {
+    padding-block-start: 2rem;
+
     p {
       margin-block-end: 1rem;
       font-size: 1.25rem;
     }
   }
   .about--title {
+    opacity: var(--opacity);
     font-size: 2rem;
     text-align: center;
   }
@@ -52,6 +55,7 @@ import { Image } from "astro:assets";
       flex-direction: row-reverse;
       align-items: center;
       column-gap: 2rem;
+      padding-block-start: 6rem;
     }
     .about--title {
       font-size: 2.5rem;
