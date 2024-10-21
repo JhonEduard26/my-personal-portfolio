@@ -13,8 +13,16 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin-block-end: 0;
 }
 
@@ -33,14 +41,21 @@ body {
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
   line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-wrap: balance;
 }
 
@@ -58,8 +73,10 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
+input,
+button,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
 }
@@ -75,56 +92,56 @@ textarea:not([rows]) {
 }
 
 /* * User styles */
-@property --header-bg { 
+@property --header-bg {
   syntax: '<color>';
   inherits: false;
   initial-value: #e3f5e3;
 }
 
-@property --bg { 
+@property --bg {
   syntax: '<color>';
   inherits: false;
   initial-value: #f3faf3;
 }
 
-@property --light-parragraph { 
+@property --light-parragraph {
   syntax: '<color>';
   inherits: false;
   initial-value: #f3faf3;
 }
 
 
-@property --primary { 
+@property --primary {
   syntax: '<color>';
   inherits: false;
   initial-value: #4cae4f;
 }
 
-@property --accent { 
+@property --accent {
   syntax: '<color>';
   inherits: false;
   initial-value: #358437;
 }
 
-@property --titles { 
+@property --titles {
   syntax: '<color>';
   inherits: false;
   initial-value: black;
 }
 
-@property --parragraph { 
+@property --parragraph {
   syntax: '<color>';
   inherits: false;
   initial-value: #0e2510;
 }
 
-@property --border { 
+@property --border {
   syntax: '<color>';
   inherits: false;
   initial-value: #6bbd6d;
 }
 
-@property --max-width { 
+@property --max-width {
   syntax: '<length>';
   inherits: false;
   initial-value: 768px;
@@ -155,7 +172,21 @@ a {
   background: var(--primary);
   color: var(--light-parragraph);
   font-weight: 600;
+  transition-property: outline-color, background;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+  outline: 3px solid transparent;
+  outline-offset: 2px;
+
+  &:hover {
+    background: var(--accent);
+  }
+
+  &:focus-visible {
+    outline-color: var(--primary);
+  }
 }
+
 .button-outline {
   display: inline-flex;
   column-gap: 0.125rem;
@@ -167,4 +198,18 @@ a {
   background: var(--light-parragraph);
   color: var(--primary);
   font-weight: 600;
+  transition-property: outline-color, background, color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+  outline: 3px solid transparent;
+  outline-offset: 2px;
+
+  &:hover {
+    background: var(--primary);
+    color: white;
+  }
+
+  &:focus-visible {
+    outline-color: var(--primary);
+  }
 }

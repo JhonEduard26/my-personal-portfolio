@@ -4,35 +4,37 @@ import TechnologyPill from "@components/TechnologyPill.astro";
 import { Icon } from "astro-icon/components";
 
 interface Props {
-  title: string
-  description: string
-  technologies: Technology[]
-  link: string
-  repo: string 
+  title: string;
+  description: string;
+  technologies: Technology[];
+  link: string;
+  repo: string;
 }
 
 interface Technology {
-  name: string
-  svg: string
-  bgColor: string
+  name: string;
+  svg: string;
+  bgColor: string;
 }
 
-const { description, link, repo, technologies, title } = Astro.props
+const { description, link, repo, technologies, title } = Astro.props;
 ---
 
 <div class="project-container">
-  <Image
-    class="project-img"
-    src="https://animated-churros-60739d.netlify.app/projects/svgl.webp"
-    width="340"
-    height="220"
-    alt="project image"
-  />
+  <figure>
+    <Image
+      class="project-img"
+      src="https://animated-churros-60739d.netlify.app/projects/svgl.webp"
+      width="340"
+      height="220"
+      alt="project image"
+    />
+  </figure>
   <div>
     <h3 class="project-name">{title}</h3>
     <ul class="project-list" role="list">
       {
-        technologies.map(tech => (
+        technologies.map((tech) => (
           <li>
             <TechnologyPill {...tech} />
           </li>
@@ -51,12 +53,21 @@ const { description, link, repo, technologies, title } = Astro.props
   .project-container {
     margin-block-end: 4rem;
   }
+  figure {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    border-radius: 0.75rem;
+  }
   .project-img {
     width: 100%;
     aspect-ratio: 16 / 9;
-    border-radius: 0.75rem;
     object-fit: cover;
     object-position: center;
+    transition: transform 300ms ease;
+    &:hover {
+      transform: scale(1.125);
+    }
   }
   .project-name {
     font-size: 1.5rem;
