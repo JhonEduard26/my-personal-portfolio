@@ -87,6 +87,13 @@ textarea:not([rows]) {
   initial-value: #f3faf3;
 }
 
+@property --light-parragraph { 
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #f3faf3;
+}
+
+
 @property --primary { 
   syntax: '<color>';
   inherits: false;
@@ -115,4 +122,43 @@ textarea:not([rows]) {
   syntax: '<color>';
   inherits: false;
   initial-value: #6bbd6d;
+}
+
+@property --max-width { 
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 768px;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: inline-flex;
+  column-gap: 0.125rem;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  background: var(--primary);
+  color: var(--light-parragraph);
+  font-weight: 600;
+}
+.button-outline {
+  display: inline-flex;
+  column-gap: 0.125rem;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary);
+  background: var(--light-parragraph);
+  color: var(--primary);
+  font-weight: 600;
 }

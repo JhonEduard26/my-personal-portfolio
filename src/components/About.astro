@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+import SectionContainer from "@components/SectionContainer.astro";
+import { Image } from "astro:assets";
+---
+
+<SectionContainer>
+  <div class="about--content">
+    <Image class="about--avatar" src="/bob-williams.webp" width="220" height="220" alt="Avatar " />
+    <div>
+      <h1 class="about--title">Hey, soy Jhon Eduard</h1>
+      <p>
+        +2 Años de experiencia. <strong class="accent-text">Ingeniero de Sistemas y Desarrollador web </strong> de Colombia <Icon name="colombia" />. Especializado en tecnologías web como React y Next.js, así como en optimización de rendimiento web y SEO.
+      </p>
+      <div class="about--buttons">
+        <a class="button" href="#"><Icon name="mail" size={18} /> Contacto</a>
+        <a class="button-outline" href="#"><Icon name="linkedin" size={20} /> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</SectionContainer>
+
+<style>
+  .about--content {
+    p {
+      margin-block-end: 1rem;
+      font-size: 1.25rem;
+    }
+  }
+  .about--title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .about--avatar {
+    margin-block: 2rem;
+    margin-inline: auto;
+    aspect-ratio: square;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+  }
+  .accent-text {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .about--buttons {
+    display: flex;
+    column-gap: 1rem;
+  }
+  @media screen and (min-width: 768px) {
+    .about--content {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      column-gap: 2rem;
+    }
+    .about--title {
+      font-size: 2.5rem;
+      text-align: start;
+    }
+  }
+</style>
