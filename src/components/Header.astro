@@ -1,4 +1,51 @@
 ---
-
+const links = [
+  {
+    label: 'Experiencia laboral',
+    href: '#',
+  },
+  {
+    label: 'Proyectos',
+    href: '#',
+  },
+  {
+    label: 'Contacto',
+    href: '#',
+  }
+]
 ---
+<header>
+  <nav>
+    <ul role="list">
+      {
+        links.map(link => (
+          <li>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))  
+      }
+    </ul>
+  </nav>
+</header>
 
+<style>
+  header {
+    display: flex;
+    justify-content: center;
+    margin-inline: 1.25rem;
+    border-radius: 2rem;
+
+  }
+  nav {
+    position: fixed;
+    top: 1rem;
+    border: 2px solid aqua;
+  }
+  ul {
+    display: flex;
+    padding-inline: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
