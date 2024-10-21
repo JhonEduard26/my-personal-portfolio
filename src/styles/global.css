@@ -29,6 +29,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: system-ui;
+  background: var(--bg);
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -71,4 +72,47 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+/* * User styles */
+@property --header-bg { 
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #e3f5e3;
+}
+
+@property --bg { 
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #f3faf3;
+}
+
+@property --primary { 
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #4cae4f;
+}
+
+@property --accent { 
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #358437;
+}
+
+@property --titles { 
+  syntax: '<color>';
+  inherits: false;
+  initial-value: black;
+}
+
+@property --parragraph { 
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #0e2510;
+}
+
+@property --border { 
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #6bbd6d;
 }

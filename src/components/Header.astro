@@ -1,7 +1,11 @@
 ---
 const links = [
   {
-    label: 'Experiencia laboral',
+    label: 'Sobre mi',
+    href: '#',
+  },
+  {
+    label: 'Experiencia',
     href: '#',
   },
   {
@@ -33,19 +37,29 @@ const links = [
     display: flex;
     justify-content: center;
     margin-inline: 1.25rem;
-    border-radius: 2rem;
-
   }
   nav {
     position: fixed;
     top: 1rem;
-    border: 2px solid aqua;
+    padding-inline: 1rem;
+    background: var(--header-bg);
+    border-radius: 2rem;
+    border: 1px solid var(--border);
   }
   ul {
     display: flex;
+    column-gap: 0.5rem;
     padding-inline: 0;
   }
   a {
     text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    a {
+      font-size: 1rem;
+    }
   }
 </style>
